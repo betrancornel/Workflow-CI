@@ -41,5 +41,3 @@ with mlflow.start_run():
     
 print("\nEksperimen selesai. Cek folder 'mlruns' dan jalankan 'mlflow ui' di terminal untuk melihat hasilnya.")
 
-
- #test
