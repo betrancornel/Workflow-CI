@@ -1,32 +1,23 @@
 name: MLflow CI
 
-# Trigger: Kapan workflow ini harus berjalan?
-# Jawab: Setiap kali ada 'push' ke branch 'main'
 on:
   push:
     branches: [ main ]
 
 jobs:
-  # Nama pekerjaan yang akan dilakukan
   run-mlflow-project:
-    # Jenis "komputer" yang akan digunakan (Ubuntu versi terbaru)
     runs-on: ubuntu-latest
 
     steps:
-      # Langkah 1: Download kode dari repository Anda ke "komputer" robot
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Langkah 2: Siapkan environment Conda untuk mengelola library
       - name: Set up Conda
         uses: conda-actions/setup-miniconda@v2
         with:
           auto-update-conda: true
-          python-version: 3.10 # Sesuaikan dengan versi di conda.yaml
+          python-version: 3.10
 
-      # Langkah 3: Jalankan "resep" MLflow Project yang sudah kita buat
-      # Perintah ini akan otomatis membaca conda.yaml, menginstall library,
-      # dan menjalankan 'python modelling.py'
       - name: Run MLflow Project
         run: mlflow run ./MLProject
         shell: bash -l {0}
