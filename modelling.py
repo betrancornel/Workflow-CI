@@ -40,3 +40,6 @@ with mlflow.start_run():
     print(f"Accuracy: {accuracy}")
     
 print("\nEksperimen selesai. Cek folder 'mlruns' dan jalankan 'mlflow ui' di terminal untuk melihat hasilnya.")
+
+
+ #test
