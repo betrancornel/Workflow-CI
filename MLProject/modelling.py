@@ -24,7 +24,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # autolog() akan secara otomatis mencatat parameter, metrik, dan model
 mlflow.autolog()
 
-with mlflow.start_run():
+with mlflow.start_run(nested=True):
     
     # Inisialisasi dan latih model
     model = LogisticRegression(max_iter=1000) # max_iter ditambah agar model konvergen
