@@ -33,7 +33,7 @@ with mlflow.start_run():
     # Lakukan prediksi pada data uji
     y_pred = model.predict(X_test)
     
-    # Hitung akurasi
+    # Hitung akurasi 1
     accuracy = accuracy_score(y_test, y_pred)
     
     print(f"Model: Logistic Regression")
