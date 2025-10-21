@@ -15,7 +15,7 @@ jobs:
       - name: Set up Conda
         uses: s-weigand/setup-conda@v1
         with:
-          python-version: 3.10
+          conda-python-version: 3.10
 
       - name: Run MLflow Project
         run: mlflow run ./MLProject
